@@ -1,10 +1,11 @@
 const BASE_URL = "https://newsapi.org/v2";
-const API_KEY = "b49dd35a15274d17bc835047a877ccf5";
+const API_KEY = "";
 
 const lista = document.querySelector('#listaDeNoticias');
 const btnHome = document.querySelector(".navbar-brand");
 const btnTec = document.querySelector('#tec');
 const btnUltimas = document.querySelector("#ultimas");
+
 
 async function getArticles() {
     let resposta = await fetch(`${BASE_URL}/top-headlines?country=br&apiKey=${API_KEY}`);
@@ -59,4 +60,3 @@ btnUltimas.addEventListener("click", function() {
 });
 
 getArticles();
-
